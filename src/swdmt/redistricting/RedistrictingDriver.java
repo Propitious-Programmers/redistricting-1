@@ -60,9 +60,11 @@ public final class RedistrictingDriver {
         System.out.println(
                 "Assigned voters with arbitrary parties to locations.");
         System.out.println(Renderer.renderAsASCII(true, region));
+
         Set<District> districts
                 = Redistrictor.generateDistricts(region, numDistricts);
         System.out.println("Created set of districts " + districts);
+        GraphicDrawTest.main(region, districts);
     }
 
     /**
